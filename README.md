@@ -9,13 +9,13 @@ Welcome to Week 6, where we explore using the jQuery library for DOM manipulatio
     - [CDN source](https://developers.google.com/speed/libraries#jquery)
     - What happens if we try to use `$` and our jQuery was sourced in after our JavaScript?
 1. document ready - we leverage `$(document).ready()` to ensure that all of our DOM content has loaded
-    - What happens if we try to grab an element with `$('#jsAddFruit')` outside of our `readyNow` function?
+    - What happens if we try to grab an element with `$('#js-addFruit')` outside of our `readyNow` function?
 
         ```js
-        console.log($('#jsAddFruit'));
+        console.log($('#js-addFruit'));
 
         function readyNow() {
-          console.log($('#jsAddFruit'));
+          console.log($('#js-addFruit'));
         }
         ```
 
@@ -24,7 +24,7 @@ Welcome to Week 6, where we explore using the jQuery library for DOM manipulatio
     ```js
     function readyNow() {
       // EVENT LISTENER
-      $('#jsAddFruit').on('click', clickAddFruit);
+      $('#js-addFruit').on('click', clickAddFruit);
     }
     ```
 
